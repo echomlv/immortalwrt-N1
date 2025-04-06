@@ -28,7 +28,7 @@ sed -i 's/luci-theme-design/luci-theme-argon/g' feeds/luci/collections/luci/Make
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # 修改主机名
-#sed -i 's/ImmortalWrt/OpenWrt/g' package/base-files/files/bin/config_generate
+sed -i 's/ImmortalWrt/OpenWrt/g' package/base-files/files/bin/config_generate
 
 # 修改主题背景
 cp -f $GITHUB_WORKSPACE/argon/img/bg1.jpg feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/bg1.jpg

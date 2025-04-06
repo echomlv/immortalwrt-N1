@@ -5,14 +5,14 @@ source make.env
 source public_funcs
 init_work_env
 
-# 盒子型号识别参数 
+# 盒子型号识别参数
 PLATFORM=amlogic
 SOC=s905d
 BOARD=n1
 
 # 让N1一直有wifi可用，以减少抱怨
 # 5.10(及以上)内核是否启用wifi  1:启用 0:禁用
-ENABLE_WIFI_K510=0
+ENABLE_WIFI_K510=1
 
 SUBVER=$1
 
@@ -180,7 +180,7 @@ patch_admin_status_index_html
 adjust_kernel_env
 copy_uboot_to_fs
 write_release_info
-write_banner 
+write_banner
 config_first_run
 create_snapshot "etc-000"
 write_uboot_to_disk
